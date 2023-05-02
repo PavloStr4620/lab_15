@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    
+</body>
+<script src="GeometricFigure.js"></script>
+<script src="Triangle.js"></script>
+<script src="Square.js"></script>
+<script src="Circle.js"></script>
+<script>
+    function handleFigures(figures) {
+    const totalArea = figures.reduce((accumulator, figure) => {
+    const area = figure.getArea();
+    console.log(`Geometric figure: ${figure.toString()} - area: ${area}`);
+    return accumulator + area;
+    }, 0);
+    console.log(totalArea);
+}
+
+
+const figures = [new Triangle(4, 5), new Square(7), new Circle(5)];
+console.log(handleFigures(figures));
+</script>
+
+</html>
